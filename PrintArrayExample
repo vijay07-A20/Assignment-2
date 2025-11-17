@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class PrintArrayExample {
+    public static <T> void printArray(T[] array) {
+        for (T element : array) {
+            System.out.println(element + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number of elements:");
+        int count = sc.nextInt();
+
+        String[] languages = new String[count];
+        System.out.println("Enter the languages:");
+        for (int i = 0; i < count; i++) {
+            languages[i] = sc.next();
+        }
+
+        System.out.println("Languages entered:");
+        printArray(languages);
+    }
+}
